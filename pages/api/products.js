@@ -3,9 +3,9 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 
 export default async function productsHandler(req, res) {
   const client = new S3Client({
-    region: process.env.AWS_S3_REGION,
-    accessKeyId: process.env.AWS_S3_ACCESSKEYID,
-    secretAccessKey: process.env.AWS_S3_SECRETACCESSKEY,
+    region: 'us-east-1',
+    accessKeyId: 'process.env.AWS_S3_ACCESSKEYID',
+    secretAccessKey: 'dkF48Kobw3i/vFrvCN/jzaWc8siehyFe9gCacJYj',
   });
   const command = new GetObjectCommand({
     Key: 'venmo.jpg',
