@@ -4,7 +4,7 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 export default async function productsHandler(req, res) {
   const client = new S3Client({
     region: 'us-east-1',
-    accessKeyId: 'process.env.AWS_S3_ACCESSKEYID',
+    accessKeyId: 'AKIARVH36J2442NXI2V4',
     secretAccessKey: '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',
   });
   const command = new GetObjectCommand({
