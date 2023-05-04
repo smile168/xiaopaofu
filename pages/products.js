@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 export default function Products({ url }) {
   const [venmo, setVenmo] = useState('');
-  useEffect(() => setVenmo(url), []);
+  useEffect(() => setVenmo(url), [url]);
   return (
     <>
       <div>
@@ -18,6 +18,7 @@ export default function Products({ url }) {
 export async function getStaticProps() {
   const response = await fetch(`${process.env.SERVER}/api/products`);
   let url = await response.json();
+  console.log(`next api call ${url}`);
   return {
     props: {
       url: url,
