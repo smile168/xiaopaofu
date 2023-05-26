@@ -14,7 +14,7 @@ export default function Payments({ paymentsData }) {
         <tr>
           <th scope='col'>Category</th>
           <th scope='col'>SearchBy</th>
-          <th scope='col'>registerAs</th>
+          <th scope='col'>RegisterAs</th>
         </tr>
         {payments.map((payment) => (
           <tr key={payment.id}>
