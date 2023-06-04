@@ -1,6 +1,11 @@
 export default async function paymentsHandler(req, res) {
   const payments = [
-    { id: '1', category: 'zelle', searchBy: '5014002990', registerAs: 'Jie' },
+    {
+      id: '1',
+      category: 'zelle',
+      searchBy: 'wednesday31234567@gmail.com',
+      registerAs: 'Jie',
+    },
     {
       id: '2',
       category: 'zelle',
@@ -25,6 +30,12 @@ export default async function paymentsHandler(req, res) {
       category: '微信',
       searchBy: 'xiaopaofu-123',
       registerAs: '小泡芙',
+    },
+    {
+      id: '7',
+      category: 'zelle',
+      searchBy: 'tuesday21234567@gmail.com',
+      registerAs: 'Jie',
     },
   ];
   res.status(200).json(payments);

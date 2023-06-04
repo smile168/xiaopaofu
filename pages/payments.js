@@ -9,22 +9,34 @@ export default function Payments({ paymentsData }) {
     navigator.clipboard.writeText(e.target.value);
   };
   return (
-    <table>
-      <tbody>
-        <tr>
-          <th scope='col'>Category</th>
-          <th scope='col'>SearchBy</th>
-          <th scope='col'>RegisterAs</th>
+    <table class='m-auto w-1/2 h-5 text-center '>
+      <thead>
+        <tr class='table-row'>
+          <th scope='col' class='table-cell'>
+            Category
+          </th>
+          <th scope='col' class='table-cell'>
+            RegisterAs
+          </th>
+          <th scope='col' class='table-cell'>
+            SearchBy
+          </th>
         </tr>
+      </thead>
+      <tbody>
         {payments.map((payment) => (
-          <tr key={payment.id}>
-            <td>{payment.category}</td>
-            <td>
-              <button value={payment.searchBy} onClick={clickToCopyHandler}>
+          <tr key={payment.id} class='table-row'>
+            <td class='table-cell'> {payment.category}</td>
+            <td class='table-cell'>{payment.registerAs}</td>
+            <td class='table-cell'>
+              <button
+                value={payment.searchBy}
+                onClick={clickToCopyHandler}
+                class='px-4 py-1 text-sm font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2'
+              >
                 Copy
               </button>
             </td>
-            <td>{payment.registerAs}</td>
           </tr>
         ))}
       </tbody>
