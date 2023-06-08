@@ -23,13 +23,13 @@ export default async function paymentsHandler(req, res) {
       id: '5',
       category: '支付宝',
       searchBy: '15623689395',
-      registerAs: 'haoze',
+      registerAs: 'haoze（伍）',
     },
     {
       id: '6',
       category: '微信',
       searchBy: 'xiaopaofu-123',
-      registerAs: '小泡芙',
+      registerAs: '小泡芙（伍）',
     },
     {
       id: '7',
