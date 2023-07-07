@@ -4,7 +4,9 @@ import { useRouter } from 'next/router';
 
 export default function Cigarettes() {
   const router = useRouter();
-  const [cigarettes, setCigarettes] = useState([]);
+  const [cigarettes, setCigarettes] = useState([
+    { _id: 'dummy', brand: '', name: '', price: 0, quantity: 0 },
+  ]);
   const [total, setTotal] = useState({ quantity: 0, totalPrice: 0 });
   const fetchCigarretes = useCallback(async () => {
     const response = await fetch(`/api/cigarettes`);
