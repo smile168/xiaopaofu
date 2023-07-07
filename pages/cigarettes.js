@@ -51,7 +51,11 @@ export default function Cigarettes() {
         <tbody>
           {cigarettes.map((cig) => (
             <Cigarette
-              cigarette={cig}
+              _id={cig._id}
+              brand={cig.brand}
+              name={cig.name}
+              price={cig.price}
+              quantity={cig.quantity}
               key={cig._id}
               onSelectCigarette={handleSelectCigarette}
             />
