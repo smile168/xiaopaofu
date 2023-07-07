@@ -49,13 +49,13 @@ export default function Cigarettes() {
           </tr>
         </thead>
         <tbody>
-          {cigarettes.map((cig) => (
+          {/* {cigarettes.map((cig) => (
             <Cigarette
               cigarette={cig}
               key={cig._id}
               onSelectCigarette={handleSelectCigarette}
             />
-          ))}
+          ))} */}
         </tbody>
         <tfoot>
           <tr>
