@@ -1,6 +1,6 @@
 export default function Cigarette(props) {
   const selctCigaretteHandler = () => {
-    onSelectCigarette(props._id);
+    props.onSelectCigarette(props._id);
   };
   return (
     <tr key={props._id} onClick={selctCigaretteHandler}>
