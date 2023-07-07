@@ -11,7 +11,7 @@ export default function Payments({ paymentsData }) {
   return (
     <>
       <h1 class='m-auto w-4/5 '>
-        请选择以下任意一种支付方式，点击相应行的Copy按钮,然后去相应软件粘贴
+        请选择以下任意一种支付方式，点击相应行的Copy按钮,然后去相应软件粘贴，安卓设备请复制链接，在浏览器中点击Copy
       </h1>
       <table class='m-auto w-4/5 text-center'>
         <thead>

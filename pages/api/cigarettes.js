@@ -1,6 +1,6 @@
 import { MongoClient, ObjectId } from 'mongodb';
 
-export default async function MongoDB(req, res) {
+export default async function Cigarettes(req, res) {
   const mongoClient = new MongoClient(process.env.MONGODB_CONNECTIONSTR);
   const product = mongoClient.db('Products');
   let cigarettes = product.collection('Cigarette');
