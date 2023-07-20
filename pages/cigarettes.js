@@ -13,6 +13,7 @@ export default function Cigarettes() {
   const fetchCigarretes = useCallback(async () => {
     const response = await fetch(`/api/cigarettes`);
     const updatedCigarettes = await response.json();
+    updatedCigarettes.sort((a, b) => a.brand.localeCompare(b.brand));
     setCigarettes(updatedCigarettes);
   }, []);
   const filterCigarettes = cigarettes.filter((cig) => {
@@ -55,19 +56,33 @@ export default function Cigarettes() {
     });
   };
   const handleSearchChange = (event) => {
-    setSearch(event.target.value);
+    setSearch(event.target.value.toLowerCase());
   };
   return (
-    <div className='flex flex-col'>
-      <input
-        type='search'
-        id='serach'
-        name='search'
-        className='mx-auto my-2 p-2 bg-gray-50 border border-gray-300 rounded-lg '
-        value={search}
-        onChange={handleSearchChange}
-        placeholder='品牌 名称 中文 拼音'
-      ></input>
+    <div className='flex flex-col text-center'>
+      <div className=''>
+        <button
+          onClick={() =>
+            router.push({
+              pathname: '/cigaretteform',
+              query: { action: 'add' },
+            })
+          }
+          className='rounded-full border border-black px-2 mx-5 font-semibold hover:bg-gray-300 my-2'
+        >
+          Add One
+        </button>
+        <input
+          type='search'
+          id='serach'
+          name='search'
+          className='mx-auto my-2 p-2 bg-gray-50 border border-gray-300 rounded-lg '
+          value={search}
+          onChange={handleSearchChange}
+          placeholder='品牌 名称 中文 拼音'
+        ></input>
+      </div>
+
       <table className='table-auto center text-center w-full sm:w-1/2 mx-auto border-collapse border border-slate-600'>
         <thead>
           <tr>
@@ -101,19 +116,7 @@ export default function Cigarettes() {
           </tr>
         </tfoot>
       </table>
-      <div className='flex'>
-        <button
-          onClick={() =>
-            router.push({
-              pathname: '/cigaretteform',
-              query: { action: 'add' },
-            })
-          }
-          className='rounded-full border border-black px-2 mx-auto font-semibold hover:bg-gray-300 my-2'
-        >
-          Add One
-        </button>
-      </div>
+      <div className='flex'></div>
     </div>
   );
 }

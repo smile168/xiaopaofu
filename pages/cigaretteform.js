@@ -58,7 +58,7 @@ export default function CigaretteForm() {
       body: JSONdata,
     };
     const response = await fetch(endpoint, options);
-    router.push('/cigarettes');
+    if (response.status == 200) router.push('/cigarettes');
   };
   const handleFormChange = () => {
     const cigarette = {
