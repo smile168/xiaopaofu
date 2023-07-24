@@ -11,7 +11,7 @@ export default function Products({ url }) {
   return (
     <>
       <div>
-        <Image src={venmo} alt='oops...' width='200' height='200' />
+        <Image src={venmo} alt='oops...' width='400' height='400' />
       </div>
       <button onClick={clickToCopyHandler}>click to copy</button>
       <p>hello world</p>

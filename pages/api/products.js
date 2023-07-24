@@ -4,7 +4,7 @@ import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 export default async function productsHandler(req, res) {
   const client = new S3Client({});
   const command = new GetObjectCommand({
-    Key: 'venmo.jpg',
+    Key: 'zgar-pot/芭乐.jpg',
     Bucket: 'xiaopaofu',
   });
   let url;
