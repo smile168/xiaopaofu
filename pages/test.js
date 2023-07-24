@@ -11,7 +11,13 @@ export default function Test({ url }) {
   return (
     <>
       <div>
-        <Image src={venmo} alt='oops...' width='400' height='400' />
+        <Image
+          src={venmo}
+          alt='oops...'
+          width='400'
+          height='400'
+          loading='lazy'
+        />
       </div>
       <button onClick={clickToCopyHandler}>click to copy</button>
       <p>hello world</p>
