@@ -18,8 +18,8 @@ export default function Cigarettes() {
   }, []);
   const filterCigarettes = cigarettes.filter((cig) => {
     return (
-      cig.name.includes(search) ||
-      cig.brand.includes(search) ||
+      cig.name.toLowerCase().includes(search) ||
+      cig.brand.toLowerCase().includes(search) ||
       pinyin(cig.brand, { style: pinyin.STYLE_NORMAL })
         .join('')
         .includes(search) ||
