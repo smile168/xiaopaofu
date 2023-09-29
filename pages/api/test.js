@@ -1,7 +1,7 @@
 import { GetObjectCommand, S3Client } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 
-export default async function productsHandler(req, res) {
+export default async function testHandler(req, res) {
   const client = new S3Client({});
   const command = new GetObjectCommand({
     Key: 'zgar-pot/芭乐.jpg',

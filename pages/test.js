@@ -2,7 +2,7 @@ import axios from 'axios';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-export default function Products({ url }) {
+export default function Test({ url }) {
   const [venmo, setVenmo] = useState('');
   useEffect(() => setVenmo(url), [url]);
   const clickToCopyHandler = () => {
@@ -11,7 +11,13 @@ export default function Products({ url }) {
   return (
     <>
       <div>
-        <Image src={venmo} alt='oops...' width='400' height='400' />
+        <Image
+          src={venmo}
+          alt='oops...'
+          width='400'
+          height='400'
+          loading='lazy'
+        />
       </div>
       <button onClick={clickToCopyHandler}>click to copy</button>
       <p>hello world</p>
@@ -20,7 +26,7 @@ export default function Products({ url }) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch(`${process.env.SERVER}/api/products`);
+  const response = await fetch(`${process.env.SERVER}/api/test`);
   let url = await response.json();
   return {
     props: {
