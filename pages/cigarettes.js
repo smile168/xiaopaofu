@@ -86,10 +86,10 @@ export default function Cigarettes() {
       <table className='table-auto center text-center w-full sm:w-1/2 mx-auto border-collapse border border-slate-600'>
         <thead>
           <tr>
-            <th className='border-t-2 border-slate-900 py-2.5'>Brand</th>
-            <th className='border-t-2 border-slate-900 py-2.5'>Name</th>
-            <th className='border-t-2 border-slate-900 py-2.5'>Quantity</th>
-            <th className='border-t-2 border-slate-900 py-2.5'>Price</th>
+            <th className='border-t-2 border-slate-900 py-2.5'>品牌</th>
+            <th className='border-t-2 border-slate-900 py-2.5'>名字</th>
+            <th className='border-t-2 border-slate-900 py-2.5'>单位(条)</th>
+            <th className='border-t-2 border-slate-900 py-2.5'>成本</th>
           </tr>
         </thead>
         <tbody>
