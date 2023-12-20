@@ -51,7 +51,7 @@ export default function Cigarettes() {
   }, [fetchCigarretes]);
   const handleSelectCigarette = async (id) => {
     router.push({
-      pathname: '/cigaretteform',
+      pathname: '/admin/cigaretteform',
       query: { id: id, action: 'update' },
     });
   };
@@ -64,7 +64,7 @@ export default function Cigarettes() {
         <button
           onClick={() =>
             router.push({
-              pathname: '/cigaretteform',
+              pathname: '/admin/cigaretteform',
               query: { action: 'add' },
             })
           }

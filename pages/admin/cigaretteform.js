@@ -58,7 +58,7 @@ export default function CigaretteForm() {
       body: JSONdata,
     };
     const response = await fetch(endpoint, options);
-    if (response.status == 200) router.push('/cigarettes');
+    if (response.status == 200) router.push('/admin/cigarettes');
   };
   const handleFormChange = () => {
     const cigarette = {
@@ -78,7 +78,7 @@ export default function CigaretteForm() {
       },
     };
     await fetch(endpoint, options);
-    router.push('/cigarettes');
+    router.push('/admin/cigarettes');
   };
   return (
     <div className='flex justify-center'>
@@ -156,7 +156,7 @@ export default function CigaretteForm() {
           <button
             type='button'
             onClick={() => {
-              router.push('/cigarettes');
+              router.push('/admin/cigarettes');
             }}
             className='rounded-full border border-black px-2 mx-auto font-semibold hover:bg-gray-300'
           >
