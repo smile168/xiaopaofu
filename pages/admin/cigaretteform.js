@@ -124,7 +124,7 @@ export default function CigaretteForm() {
         </div>
         <div>
           <label className='text-lg font-medium text-gray-900 block'>
-            Avergae Price
+            Cost:
           </label>
           <input
             type='number'
@@ -139,7 +139,7 @@ export default function CigaretteForm() {
         </div>
         <div>
           <label className='text-lg font-medium text-gray-900 block'>
-            Quantity
+            Quantity:
           </label>
           <input
             type='number'
