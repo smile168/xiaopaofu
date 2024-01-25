@@ -6,10 +6,8 @@ import Image from 'next/image';
 export default function Zegar({ url }) {
   const flavor = [{ en: 'Grape' }];
   const fifthPot = [
-    '香桃冰',
     '香芋冰淇淋',
     '龙眼冰',
-    '青提冰',
     '芭乐',
     '绿豆冰',
     '菠萝橙子',
@@ -40,6 +38,7 @@ export default function Zegar({ url }) {
     '荔枝',
     '冻柠茶',
   ];
+  const comingPot = ['香桃冰', '莓果', '青提', '蜜桃乌龙', '茉莉龙井', '杨桃'];
   return (
     <div>
       <Image src={zgarPotHeader} alt={vercel} class='w-full' />
@@ -63,6 +62,24 @@ export default function Zegar({ url }) {
       </div>
       <div class='flex flex-wrap'>
         {sixthPot.map((pot) => (
+          <div
+            key={pot}
+            class='w-1/3 sm:w-1/4 lg:w-1/5 p-3 flex items-center justify-center'
+          >
+            <div
+              key={pot}
+              class='bg-gray-100 px-2 py-1 rounded-lg border-solid border-2 flex items-center justify-center'
+            >
+              <p class='font-semibold'>{pot}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class='flex items-center justify-center'>
+        <p class='font-medium text-3xl'>1/26周五到货</p>
+      </div>
+      <div class='flex flex-wrap'>
+        {comingPot.map((pot) => (
           <div
             key={pot}
             class='w-1/3 sm:w-1/4 lg:w-1/5 p-3 flex items-center justify-center'
