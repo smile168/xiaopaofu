@@ -50,7 +50,7 @@ export default function Zegar({ url }) {
           >
             <div
               key={pot}
-              class='bg-gray-100 px-2 py-1 rounded-lg border-solid border-2 flex items-center justify-center'
+              class=' px-2 py-1 rounded-lg border-solid border-2 flex items-center justify-center'
             >
               <p class='font-semibold'>{pot}</p>
             </div>
@@ -68,7 +68,7 @@ export default function Zegar({ url }) {
           >
             <div
               key={pot}
-              class='bg-gray-100 px-2 py-1 rounded-lg border-solid border-2 flex items-center justify-center'
+              class=' px-2 py-1 rounded-lg border-solid border-2 flex items-center justify-center'
             >
               <p class='font-semibold'>{pot}</p>
             </div>
@@ -86,7 +86,7 @@ export default function Zegar({ url }) {
           >
             <div
               key={pot}
-              class='bg-gray-100 px-2 py-1 rounded-lg border-solid border-2 flex items-center justify-center'
+              class=' px-2 py-1 rounded-lg border-solid border-2 flex items-center justify-center'
             >
               <p class='font-semibold'>{pot}</p>
             </div>
