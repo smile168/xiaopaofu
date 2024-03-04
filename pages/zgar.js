@@ -12,7 +12,6 @@ export default function Zegar({ url }) {
     '青提',
     '棒棒冰',
     '白玉冰',
-    '初萃龙井',
     '情人果',
     '冰咖啡',
   ];
@@ -23,7 +22,6 @@ export default function Zegar({ url }) {
     '清香桂花',
     '香芋冰淇淋',
     '冰镇蜜柚茶',
-    '柠檬可乐',
     '金桔百香果',
     '柠檬冰',
     '冰水',
@@ -58,7 +56,7 @@ export default function Zegar({ url }) {
         ))}
       </div>
       <div class='flex items-center justify-center'>
-        <p class='font-medium text-3xl'>六代</p>
+        <p class='font-medium text-3xl'>六代如下</p>
       </div>
       <div class='flex flex-wrap'>
         {sixthPot.map((pot) => (
